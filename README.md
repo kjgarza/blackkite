@@ -1,5 +1,36 @@
+# Blackkite: Ingestor and processor of data to MongoDB
 
-# Semantic Search Made Easy With LangChain and MongoDB
+Blackkite helps you to create a small MongoDB index for makins semantic search or RAG. By default indexs only markdown files that are in a single directory.
+
+1. Update environment variables with your MongoDB connection string and Open AI [API key](https://platform.openai.com/account/api-keys).
+
+1. Create a new Python environment
+```zsh
+python3 -m venv env
+```
+
+3. Activate the new Python environment
+```zsh
+source env/bin/activate
+```
+
+4. Install the requirements
+```zsh
+pip3 install -r requirements.txt
+```
+
+5. Load, Transform, Embed and Store
+```zsh
+python3 vectorize.py {path}
+```
+
+Make sure all the files are in the same directory. you can use the utils to move them.
+```zsh
+sh move_.md.sh
+```
+
+
+## Semantic Search Made Easy With LangChain and MongoDB
 
 Enabling semantic search on user-specific data is a multi-step process that includes loading, transforming, embedding and storing data before it can be queried.
 
