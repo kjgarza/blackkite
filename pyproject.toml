@@ -5,7 +5,7 @@ description = "Pipeline for RAG"
 authors = ["Kristian Garza <kj.garza@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 argparse = "*"
 langchain = "^0.0.231"
 lxml = "*"
@@ -14,6 +14,7 @@ requests = "*"
 bs4 = "*"
 openai = "*"
 tiktoken = "*"
+click = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
