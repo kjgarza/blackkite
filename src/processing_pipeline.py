@@ -16,6 +16,7 @@ class ProcessingPipeline:
         # Tokenization stage
         tokens = self.tokenizer.process(data)
         print("Tokenization complete:", tokens)
+        self.tokens = tokens
 
         # Vectorization stage
         self.vectors = self.vectorizer.process(tokens)
@@ -24,9 +25,9 @@ class ProcessingPipeline:
         # Here you could add additional processing stages
         return self.vectors
 
-    def store(self, vectors=[]):
+    def store(self, tokens=[]):
         try:
-            self.storage.insert_vectors([], self.vectors)
+            self.storage.insert_vectors(self.tokens, self.vectors)
             print("Data stored successfully.")
         except Exception as e:
             print("Error storing data:", str(e))

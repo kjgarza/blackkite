@@ -14,6 +14,7 @@ class VectorDBDAO:
         self.collection = self.client[os.environ["DB_NAME"]][
             os.environ["COLLECTION_NAME"]
         ]
+        self.index_name = os.environ["INDEX_NAME"]
 
         # # Reset w/out deleting the Search Index
         self.collection.delete_many({})
@@ -23,7 +24,7 @@ class VectorDBDAO:
             splits,
             embeddings,
             collection=self.collection,
-            index_name=os.environ["INDEX_NAME"],
+            index_name=self.index_name,
         )
         # return True
         self.close()
