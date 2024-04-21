@@ -2,6 +2,7 @@
 import os
 
 from ingestion_service import IngestionService
+from vector_db_dao import VectorDBDAO
 
 
 class IngestDataCommand:
@@ -20,3 +21,16 @@ class IngestDataCommand:
         print("Ingesting data...")
         self.ingestion_service.ingest(data)
         print("Data ingestion complete.")
+
+
+class QueryDataCommand:
+    def __init__(self, query):
+        self.query = query
+        self.vectorStore = VectorDBDAO(os.environ["MONGO_CONN_STRING"])
+
+    def execute(self):
+        print("Querying data...")
+        docs = self.vectorStore.query(self.query)
+        print(docs[0].metadata["title"])
+        print(docs[0].page_content)
+        print("Query complete.")

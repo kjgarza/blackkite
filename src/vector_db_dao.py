@@ -29,6 +29,13 @@ class VectorDBDAO:
         # return True
         self.close()
 
+    def query(self, query, K=2):
+        vectorStore = MongoDBAtlasVectorSearch(
+            self.collection, index_name=self.index_name
+        )
+        docs = vectorStore.max_marginal_relevance_search(query, K=K)
+        return docs
+
     # def insert_vector(self, vector_data):
     #     """Inserts vector data into MongoDB."""
     #     result = self.collection.insert_one(vector_data)
