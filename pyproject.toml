@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "blackkite"
+version = "0.1.0"
+description = "Pipeline for RAG"
+authors = ["Kristian Garza <kj.garza@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+argparse = "*"
+langchain = "^0.0.231"
+lxml = "*"
+pymongo = "*"
+requests = "*"
+bs4 = "*"
+openai = "*"
+tiktoken = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
