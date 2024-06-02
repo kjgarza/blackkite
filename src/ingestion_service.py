@@ -8,7 +8,7 @@ class IngestionService:
         # For example, a logger or a database connection if needed.
         pass
 
-    def ingest(self, data):
+    def ingest(self, data: list[str]):
         """
         Process the data received from the CLI.
 
@@ -32,7 +32,7 @@ class IngestionService:
             str: The preprocessed data.
         """
         # Example preprocessing: convert to lowercase
-        return data.lower()
+        return data
 
     def send_to_pipeline(self, processed_data):
         """
@@ -41,12 +41,11 @@ class IngestionService:
         data processing components.
 
         Args:
-            processed_data (str): The processed data ready for further processing.
+            processed_data (str): The processed data ready for further 
+            processing.
         """
-        # This is a stub method to simulate sending the processed data to the pipeline.
-        # Replace this with actual code to send data to your data processing pipeline.
         pp = ProcessingPipeline()
         processed_data = pp.process(processed_data)
         print("Processing data:", processed_data)
-        pp.store(processed_data)
+        pp.store()
         print("Stored data:", processed_data)

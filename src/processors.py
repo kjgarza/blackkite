@@ -4,10 +4,11 @@ import os
 from langchain.document_loaders import UnstructuredMarkdownLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
 
 
 class Tokenizer:
-    def process(self, file_paths):
+    def process(self, file_paths: list[str]) -> list[Document]:
         """Simulate tokenization of input data."""
         # return data.split()
         # # Read documents
@@ -25,8 +26,8 @@ class Tokenizer:
 
 
 class Vectorizer:
-    def process(self, tokens):
+    def process(self) -> OpenAIEmbeddings:
         """Simulate converting tokens to a vector (dummy implementation)."""
         # This is a placeholder for actual vectorization logic.
-        embeddings = OpenAIEmbeddings(openai_api_key=os.environ["OPENAI_API_KEY"])
+        embeddings = OpenAIEmbeddings(api_key=os.environ["OPENAI_API_KEY"])
         return embeddings
