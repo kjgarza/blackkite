@@ -7,7 +7,7 @@ authors = ["Kristian Garza <kj.garza@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 argparse = "*"
-langchain = "^0.0.231"
+langchain = "^0.2.1"
 lxml = "*"
 pymongo = "*"
 requests = "*"
@@ -15,6 +15,11 @@ bs4 = "*"
 openai = "*"
 tiktoken = "*"
 click = "*"
+pydantic = "^2.3"
+pydantic-settings = "^2.2.1"
+unstructured = "*"
+markdown = "*"
+dotenv = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
