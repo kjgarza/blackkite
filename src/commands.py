@@ -11,28 +11,10 @@ class IngestDataCommand:
         self.path = path
         self.ingestion_service = IngestionService()
 
-    # def execute(self):
-    #     if not os.path.exists(self.filename):
-    #         print(f"Error: File '{self.filename}' not found.")
-    #         return
-
-    #     with open(self.filename, "r") as file:
-    #         data = file.read()
-
-    #     print("Ingesting data...")
-    #     self.ingestion_service.ingest(data)
-    #     print("Data ingestion complete.")
-
     def execute(self):
         if not os.path.exists(self.path):
             print(f"Error: Path '{self.path}' not found.")
             return
-
-        # data = ""
-        # for root, _, files in os.walk(self.path):
-        #     for file in files:
-        #         with open(os.path.join(root, file), "r") as f:
-        #             data += f.read()
 
         file_paths = []
         for root, _, files in os.walk(self.path):
