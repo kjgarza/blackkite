@@ -2,10 +2,10 @@ import os
 
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import MongoDBAtlasVectorSearch
-from pydantic import HttpUrl
-from pymongo import MongoClient
-from processors import Tokenizer, Vectorizer
 from langchain_core.documents import Document
+from pymongo import MongoClient
+
+from processors import Vectorizer
 
 
 class VectorDBDAO:

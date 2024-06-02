@@ -41,7 +41,7 @@ class IngestionService:
         data processing components.
 
         Args:
-            processed_data (str): The processed data ready for further 
+            processed_data (str): The processed data ready for further
             processing.
         """
         pp = ProcessingPipeline()

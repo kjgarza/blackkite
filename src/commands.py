@@ -33,7 +33,7 @@ class IngestDataCommand:
         #     for file in files:
         #         with open(os.path.join(root, file), "r") as f:
         #             data += f.read()
-        
+
         file_paths = []
         for root, _, files in os.walk(self.path):
             for file in files:
@@ -43,9 +43,6 @@ class IngestDataCommand:
         print(file_paths)
         self.ingestion_service.ingest(file_paths)
         print("Data ingestion complete.")
-
-
-
 
 
 class QueryDataCommand:

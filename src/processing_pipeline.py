@@ -1,7 +1,8 @@
 # processing_pipeline.py
+import os
+
 from processors import Tokenizer, Vectorizer
 from vector_db_dao import VectorDBDAO
-import os
 
 
 class ProcessingPipeline:
