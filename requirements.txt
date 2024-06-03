@@ -6,3 +6,5 @@ requests
 bs4
 openai
 tiktoken
+unstructured
+markdown
