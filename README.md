@@ -1,5 +1,7 @@
 # Blackkite: Ingestor and processor of data to MongoDB
 
+> **⚠️ DEPRECATED**: This project is no longer maintained and will not receive future updates. Please consider using alternative solutions for MongoDB vector search and RAG implementations.
+
 Blackkite helps you to create a small MongoDB index for makins semantic search or RAG. By default indexs only markdown files that are in a single directory.
 
 1. Update environment variables with your MongoDB connection string and Open AI [API key](https://platform.openai.com/account/api-keys).

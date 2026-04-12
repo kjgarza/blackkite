@@ -6,6 +6,7 @@ authors:
     orcid: https://orcid.org/0000-0003-3484-6875
     affiliation:
 title: Blackkite Ingestor and processor of data to MongoDB
+status: deprecated
 abstract: Blackkite helps you to create a small MongoDB index for making semantic search or RAG.
   By default, it indexes only markdown files that are in a single directory. To use
   Blackkite, update the environment variables with your MongoDB connection string and
